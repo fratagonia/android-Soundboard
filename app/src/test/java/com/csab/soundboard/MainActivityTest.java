@@ -11,12 +11,18 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
+@Config(emulateSdk = 18, reportSdk = 18)
 @RunWith(RobolectricTestRunner.class)
-@Config(emulateSdk = 18)
 public class MainActivityTest {
 
     @Test
-    public void gridViewIsNotNull() {
+    public void testActivityNotNull() {
+        ActionBarActivity activity = Robolectric.buildActivity(MainActivity.class).create().get();
+        assertNotNull(activity);
+    }
+
+    @Test
+    public void testGridViewNotNull() {
         ActionBarActivity activity = Robolectric.buildActivity(MainActivity.class).create().get();
         GridView gridView = (GridView) activity.findViewById(R.id.gridView);
         assertNotNull(gridView);

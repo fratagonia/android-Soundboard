@@ -32,6 +32,6 @@ dependencies {
     compile "com.android.support:appcompat-v7:21.0.0"
 
     testCompile 'junit:junit:4.10'
-    testCompile 'org.robolectric:robolectric:2.3'
+    testCompile 'org.robolectric:robolectric:2.4-SNAPSHOT'
     testCompile 'com.squareup:fest-android:1.0.8'
 }
